@@ -19,7 +19,7 @@ app.get("/", async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.send("ERROR!");
+    res.send("ERROR1!");
   }
 });
 
