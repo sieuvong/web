@@ -24,7 +24,7 @@ jobs:
         CI: true
     - name: npm login
       run: |
-        npm login
+        npm login --registry=https://npm.pkg.github.com/
         sieuvong
         97f1f7cedfc28686eea5fc38797b2b3dd09a4327
         sieuvong@kms-technology.com
