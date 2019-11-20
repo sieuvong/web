@@ -22,9 +22,13 @@ jobs:
         yarn install
       env:
         CI: true
-    - uses: primer/publish@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        args: '--registry=https://npm.pkg.github.com/'
+    - name: npm login
+      run: |
+        npm login
+        sieuvong
+        97f1f7cedfc28686eea5fc38797b2b3dd09a4327
+        sieuvong@kms-technology.com
+    - name: npm publish
+      run: |
+        npm publish
     
