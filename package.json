@@ -2,6 +2,7 @@
   "name": "@sieuvong/web",
   "version": "1.0.0",
   "main": "app.js",
+  "description": "hellu",
   "license": "MIT",
   "scripts": {
     "start": "node app.js"
