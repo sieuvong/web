@@ -22,6 +22,9 @@ jobs:
         yarn install
       env:
         CI: true
+    - name: npm login
+      run: |
+        npm login --registry=https://npm.pkg.github.com/ --username=sieuvong --password=cedff3a5b3c2071e6ca203f45b4991d2a2785371 --email=sieuvong@kms-technology.com
     - name: npm publish
       run: |
         npm publish
