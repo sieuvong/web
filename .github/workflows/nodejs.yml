@@ -30,5 +30,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: build-docker-image
-        run: docker image build -t web:latest ../..
+      - name: Build docker image
+        run: docker build -t web:latest ../..
+      - name: Login to Docker Registry
+        run: docker login docker.pkg.github.com -u ${{secrets.DOCKER_USERNAME}} -p {{secrets.DOCKER_PASSWORD}}
+      - name: Publish to Docker Registry
+        run: docker push docker.pkg.github.com/${{github.repository}}
