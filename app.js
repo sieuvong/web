@@ -1,5 +1,6 @@
 const express = require("express");
 const axios = require("axios").default;
+// const superAI = require("super-ai");
 
 const app = express();
 const port = 3001;
@@ -11,6 +12,7 @@ const client = axios.create({
 app.set("view engine", "pug");
 app.get("/", async (req, res) => {
   try {
+    // superAI();
     const products = await client.get("/products");
     res.render("index", {
       title: "Hey",
