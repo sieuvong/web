@@ -31,4 +31,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build-docker-image
-          run: docker image build -t web:latest . 
+        run: docker image build -t web:latest . 
