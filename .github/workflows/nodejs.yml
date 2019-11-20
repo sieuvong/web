@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build docker image
-        run: docker build -t web:latest --file Dockerfile .
+        run: docker build . -t web:latest --file Dockerfile
       - name: Login to Docker Registry
         run: docker login docker.pkg.github.com -u ${{secrets.DOCKER_USERNAME}} -p {{secrets.DOCKER_PASSWORD}}
       - name: Publish to Docker Registry
