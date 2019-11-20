@@ -22,3 +22,10 @@ jobs:
         yarn install
       env:
         CI: true
+    - name: npm publish
+      run: |
+        npm publish
+      env:
+        CI: true
+
+    
