@@ -3,11 +3,11 @@ name: Node.js Package
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - run: npm install
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - run: npm install
 
   # publish-npm:
   #   needs: build
@@ -24,7 +24,7 @@ jobs:
   #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   build-docker-image:
-    needs: build
+#     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Build docker image
